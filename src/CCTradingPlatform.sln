@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CCTradingPlatform.UnitTests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCTradingPlatform.API", "CCTradingPlatform.API\CCTradingPlatform.API.csproj", "{F6EE154D-AF7E-45FF-A0FE-CC226D279BE8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCTradingPlatform.Core", "CCTradingPlatform.Core\CCTradingPlatform.Core.csproj", "{C1E22F9C-8D2B-4A77-B808-61996AB447E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F6EE154D-AF7E-45FF-A0FE-CC226D279BE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6EE154D-AF7E-45FF-A0FE-CC226D279BE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6EE154D-AF7E-45FF-A0FE-CC226D279BE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1E22F9C-8D2B-4A77-B808-61996AB447E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1E22F9C-8D2B-4A77-B808-61996AB447E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1E22F9C-8D2B-4A77-B808-61996AB447E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1E22F9C-8D2B-4A77-B808-61996AB447E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
