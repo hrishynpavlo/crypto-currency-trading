@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CCTradingPlatform.UnitTests", "CCTradingPlatform.UnitTests\CCTradingPlatform.UnitTests.csproj", "{C4441D55-D5A6-4805-8D58-D46BE95568B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCTradingPlatform.API", "CCTradingPlatform.API\CCTradingPlatform.API.csproj", "{F6EE154D-AF7E-45FF-A0FE-CC226D279BE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4441D55-D5A6-4805-8D58-D46BE95568B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4441D55-D5A6-4805-8D58-D46BE95568B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4441D55-D5A6-4805-8D58-D46BE95568B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4441D55-D5A6-4805-8D58-D46BE95568B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6EE154D-AF7E-45FF-A0FE-CC226D279BE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6EE154D-AF7E-45FF-A0FE-CC226D279BE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6EE154D-AF7E-45FF-A0FE-CC226D279BE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6EE154D-AF7E-45FF-A0FE-CC226D279BE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32C04461-B05B-464A-907B-6B738170F665}
+	EndGlobalSection
+EndGlobal
