@@ -66,15 +66,5 @@ namespace CCTradingPlatform.Core.Strategies
         {
             return await Task.FromResult(true);
         }
-
-        private async Task MakeOrder(ref int repetition, ref int prevPrice, int price)
-        {
-            var result = await MakeOrder();
-            if (result)
-            {
-                repetition++;
-                prevPrice = price;
-            }
-        }
     }
 }
