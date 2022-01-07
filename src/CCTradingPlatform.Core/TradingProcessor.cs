@@ -17,7 +17,7 @@ namespace CCTradingPlatform.Core
 
         public async Task Start(ITradingStrategy strategy)
         {
-            strategy.Execute();
+            await strategy.ExecuteAsync();
 
         }
     }
