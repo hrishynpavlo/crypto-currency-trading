@@ -1,30 +1,21 @@
 ﻿using Binance.Net;
 using Binance.Net.Objects;
+using PuppeteerSharp;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Channels;
 
 namespace CCTradingPlatform.Providers.Binance
 {
     public class BinanceMarket : IMarketProvider
     {
-        public Channel<decimal> GetMarketStream()
-        {
-            var chan = Channel.CreateBounded<decimal>(new BoundedChannelOptions(512)
-            {
-                SingleWriter = true,
-                SingleReader = false,
-                AllowSynchronousContinuations = false,
-                FullMode = BoundedChannelFullMode.DropOldest
-            });
-            var client = new BinanceSocketClient(new BinanceSocketClientOptions
-            {
-                
-            });
-            client.FuturesUsdt.SubscribeToMarkPriceUpdatesAsync("btc", 1000, msg => chan.Writer.TryWrite(msg.Data.MarkPrice));
+        private readonly ChannelReader<decimal> _channelReader;
 
-            return chan;
+        public BinanceMarket(ChannelReader<decimal> channelReader)
+        {
+            _channelReader = channelReader ?? throw new ArgumentNullException(nameof(channelReader));
         }
+
+        public IAsyncEnumerable<decimal> GetMarketStream() => _channelReader.ReadAllAsync();
     }
 }

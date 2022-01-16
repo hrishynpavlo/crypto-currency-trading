@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Binance.Net" Version="7.2.7" />
+    <PackageReference Include="PuppeteerSharp" Version="6.1.0" />
   </ItemGroup>
 
 </Project>

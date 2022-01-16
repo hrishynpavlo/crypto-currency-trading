@@ -1,3 +1,4 @@
+using CCTradingPlatform.API.BackgroundServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +11,7 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 
 namespace CCTradingPlatform.API
@@ -26,12 +28,18 @@ namespace CCTradingPlatform.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CCTradingPlatform.API", Version = "v1" });
             });
+            services.AddSingleton(Channel.CreateBounded<decimal>(new BoundedChannelOptions(50)
+            {
+                SingleWriter = true,
+                SingleReader = true,
+                FullMode = BoundedChannelFullMode.DropOldest
+            }));
+            services.AddHostedService(provider => new BinanceMarketStreamService(provider.GetService<Channel<decimal>>().Writer));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

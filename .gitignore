@@ -367,3 +367,5 @@ FodyWeavers.xsd
 .github/*
 
 codecoverage/
+
+.local-chromium/
